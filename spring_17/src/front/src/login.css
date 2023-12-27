@@ -1,0 +1,1980 @@
+.no-scroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .no-scroll::-webkit-scrollbar {
+    display: none;
+  }
+.App
+{
+    /*overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute;*/
+    display: flex;
+    height:auto;
+    flex-direction: column;
+}
+
+/* html,body {
+    margin:0;
+    padding-bottom: 0;
+    width:100%;
+    min-height: 100%;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} */
+
+main {
+    flex: 1;
+}
+
+.mainPage {
+    padding-bottom: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 2700px;
+}
+
+
+.bodyWrap {
+    width: 70%;
+    height: 80%;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+
+/* ===== 헤더 ===== */
+
+.header {
+	overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header2 {
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 30px 20px;
+    overflow: hidden;
+    width: 100%;
+    height: 150px;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+.header-line {
+    background-image: linear-gradient(180deg, rgba(112.62499898672104, 215.40455907583237, 255, 1) 0%,rgba(112.62499898672104, 215.40455907583237, 255, 0) 100%);
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header-line2 {
+	display: flex;
+	background-image: linear-gradient(180deg, rgba(112.62499898672104, 215.40455907583237, 255, 1) 0%,rgba(112.62499898672104, 215.40455907583237, 255, 0) 100%);
+	width: 100%;
+	height: 150px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0 20px;
+}
+
+.header-title {
+    color: #FFFFFF;
+    width: 250px;
+    height: 80px;
+    font-family: Jaldi;
+    font-size: 32px;
+    text-shadow: 1px 2px 2px gray;
+
+    position: fixed;
+    top: 85px;
+    left: 2%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0;
+    z-index: 1;
+}
+
+.myPage-text, .calendarPage-text {
+    color: rgba(255, 255, 255, 1);
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 10px; /* 각 버튼 간격 조절 */
+    margin-right: 10px;
+}
+
+.bi-list-ul{
+	line-height: 22px;
+	color: rgba(255, 255, 255, 1);
+}
+
+.bi-house {
+	line-height: 22px;
+}
+
+/* 햄버거 */
+.mobile-nav-toggle {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+    cursor: pointer;
+	z-index: 100;
+	position: relative;
+    top: 35%;
+    transform: translateY(-100%);
+    align-items: center; /* 수직 가운데 정렬 */
+}
+
+/* 닫기 버튼*/
+.mobile-nav-hide {
+    color: rgba(255, 255, 255, 1);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* 화면이 작을 때(모바일 화면) 스타일 */
+@media (max-width: 1270px) {
+    /* 텍스트 버튼 숨김 */
+    .navbar .myPage-text{
+        display: none;
+    }
+    .navbar .calendarPage-text{
+        display: none;
+    }
+    /* 햄버거 버튼 표시 */
+    .mobile-nav-toggle {
+        display: block;
+    }
+}
+
+/* 화면이 클 때(데스크탑 화면) 스타일 */
+@media (min-width: 1270px) {
+    /* 텍스트 버튼 표시 */
+    .navbar {
+        display: flex;
+    }
+    /* 햄버거 버튼 숨김 */
+    .mobile-nav-toggle {
+        display: none;
+    }
+}
+
+
+/* ===== 프로필 박스 ===== */
+/* ===== 사이드 프필 공간 ===== */
+.profile-container{
+    position: relative;
+    height: auto;
+}
+/* ===== 사이드 프필 공간 끝 ===== */
+
+.profile-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-box {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(249.00000035762787, 251.00000023841858, 252.00000017881393, 1);
+	width:300px;
+	height:455px;
+    top: 90px;
+    right: 20px;
+	border-radius:25px;
+	border:4px solid rgba(112.62499898672104, 215.40455907583237, 255, 1);
+
+    position:fixed;
+    display: flex;
+    padding: 10px;
+    z-index: 9999;
+    flex-direction: column;
+    align-items: flex-end;
+
+    animation: move 2s ease-in-out;
+}
+
+.profile-box div {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.profile-box .prf-img {
+    width: 120px;
+    height: 150px;
+	position:absolute;
+	left:87px;
+	top:20px;
+	/* background-image:url(images/default_profile_4.png); */
+    background-color: #d0d0d0;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.prf-name {
+    color:rgba(48.87499898672104, 48.87499898672104, 48.87499898672104, 1);
+    width:130px;
+    height:50px;
+    position:absolute;
+    left:98px;
+    top:175px;
+    font-family:Inter;
+    text-align:left;
+    font-size:25px;
+    letter-spacing:0;
+}
+
+.bi-house-door-fill {
+    color: rgba(133, 133, 133, 1);
+    font-size: 28px;
+    position:absolute;
+    left:130px;
+    top:330px;
+}
+/* ===== 프로필 박스 끝 ===== */
+
+/* ===== 헤더 끝 ===== */
+
+
+.body {
+	overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.LOGIN-title {
+    color: rgba(28.68749924004078, 28.68749924004078, 28.68749924004078, 1);
+    width: 210px;
+    height: 116px;
+    position: relative;
+    top:55px;
+    font-family: Jaldi;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+/*.id-box,
+.password-box {
+    position: relative;
+}*/
+.login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(249, 251, 252, 1);
+    width: 500px;
+    height: 200px;
+    position: relative;
+    border-radius: 70px;
+    border: 1px solid rgba(133, 133, 133, 1);
+    margin-top: 50px;
+}
+.login-box-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#userId {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 1);
+    width: 467px;
+    height: 62px;
+    position: absolute;
+    top: -120px;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%);
+    border-radius: 90px;
+    border: 1px solid rgba(133.00000727176666, 133.00000727176666, 133.00000727176666, 1);
+
+
+    color: rgba(133.00000727176666, 133.00000727176666, 133.00000727176666, 1);
+    font-family: Inter;
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+#userPassword {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(255, 255, 255, 1);
+    width: 467px;
+    height: 63px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    padding: 10px;
+    transform: translateX(-50%);
+    border-radius: 90px;
+    border: 1px solid rgba(133.00000727176666, 133.00000727176666, 133.00000727176666, 1);
+
+    color: rgba(133.00000727176666, 133.00000727176666, 133.00000727176666, 1);
+    font-family: Inter;
+    text-align: left;
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+.login-text {
+    color: rgb(255, 255, 255, 1);
+    width: 94px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    font-family: Inter;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+.sign-up-text {
+    color: rgb(255, 255, 255, 1);
+    width: 120px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%);
+    font-family: Inter;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+
+/* ====== footer 부분 ====== */
+.footer-line {
+	background-image:linear-gradient(180deg, rgba(112.62499898672104, 215.40455907583237, 255, 0) 0%,rgba(112.62499898672104, 215.40455907583237, 255, 1) 100%) ;
+	width: 100%;
+	height:170px;
+	position:absolute;
+	left:0px;
+	bottom: 0;
+    z-index: 50;
+}
+.footer-title {
+    color: rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 80px;
+    font-family: Jaldi;
+    font-size: 38px;
+	font-weight: bold;
+    text-shadow: 1px 2px 2px gray;
+
+	position:absolute;
+	left:5%;
+	top:80px;
+	font-family:Khula;
+	text-align: center;
+	transform: translate(0%, -10%);
+	letter-spacing:0;
+}
+.footer-info {
+	color:#585858;
+	width:410px;
+	height:115px;
+	position:absolute;
+	left:1350px;
+	top:50px;
+	font-family:Inter;
+	text-align:left;
+	font-size:18px;
+	letter-spacing:0;
+}
+.m-footer {
+    overflow: hidden;
+    width: 100%;
+    height: 170px;
+    position: sticky;
+    bottom: 0;
+
+	top: 1900px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 50;
+}
+/* ====== footer 부분 끝 ====== */
+
+
+
+
+
+
+/* ====== 메인 페이지 부분 ====== */
+
+/* ====== 운동 추천 부분 ====== */
+.recom-PT-title-box, .recom-PT-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position:absolute;
+	transform: translateX(-50%);
+    left: 50%;
+}
+
+
+.recom-PT-title-box {
+	background-color:rgba(112.62499898672104, 215.40455907583237, 255, 1);
+	width:757px;
+	height:55px;
+	top:230px;
+	border-radius: 90px;
+}
+.recom-PT-title-text {
+	color:rgba(255, 255, 255, 1);
+	width:146px;
+	height:55px;
+	position:absolute;
+	left:40%;
+	top: -5%;
+	font-family:Inter;
+	text-align:center;
+	font-size:35px;
+	letter-spacing:0;
+	z-index: 2;
+}
+
+.recom-PT-box {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(229.1569483280182, 245.6965336203575, 255, 1);
+	width:765px;
+	height:244px;
+	top:300px;
+	position:absolute;
+	border-radius:60px;
+	z-index: 1;
+}
+
+.PT-type1,
+.PT-type2,
+.PT-type3 {
+    /* 기존 스타일 유지 */
+    background-color: rgba(255, 255, 255, 1);
+    width: 220px;
+    height: 207px;
+    position: absolute;
+    border-radius: 30px; /* 적절한 값으로 조정 */
+}
+
+.PT-type1 {
+	left: 3%;
+}
+
+.PT-type3 {
+	left: 68%;
+}
+
+.PT-type1-text,
+.PT-type2-text,
+.PT-type3-text {
+    color: rgba(48.87499898672104, 48.87499898672104, 48.87499898672104, 1);
+    width: 210px;
+    height: 68px;
+    position: absolute;
+    font-family: Inter;
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0;
+
+	left: 5%;
+    top: 50%;
+    transform: translateY(-35%);
+}
+/* ====== 운동 추천 부분 끝 ====== */
+
+/* ====== 식단표 부분 ====== */
+
+.recom-Food-title {
+	color:rgba(28.68749924004078, 28.68749924004078, 28.68749924004078, 1);
+	position:absolute;
+	top:700px;
+	left:50%;
+	font-family:Inter;
+	font-size:36px;
+	font-weight: bold;
+	letter-spacing:0;
+	transform: translate(-50%, -50%);
+}
+
+.recom-Food-out-box1,
+.recom-Food-out-box2,
+.recom-Food-out-box3 {
+    background-color: rgba(217.0000022649765, 217.0000022649765, 217.0000022649765, 1);
+    width: 320px;
+    height: 318px;
+	top: 760px;
+    z-index: 1;
+	position:absolute;
+}
+
+.recom-Food-out-box1 {
+    left: calc(50% - 490px);
+}
+
+.recom-Food-out-box2 {
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.recom-Food-out-box3 {
+    left: calc(50% + 170px);
+}
+
+.recom-Food-in-box1,
+.recom-Food-in-box2,
+.recom-Food-in-box3 {
+	box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: rgba(248.09374898672104, 248.09374898672104, 248.09374898672104, 1);
+    width: 320px;
+    height: 265px;
+	top: 62px;
+	position:absolute;
+}
+
+.Food-morning,
+.Food-afternoon,
+.Food-evening {
+	color: rgba(0, 0, 0, 1);
+	font-family: Inter;
+	text-align: center;
+	font-size: 30px;
+	letter-spacing: 0;
+	height:71px;
+}
+
+
+/* ====== 식단표 부분 끝 ====== */
+
+
+/* ====== BMI 부분 ====== */
+
+.BMI-title {
+	color:rgba(28.68749924004078, 28.68749924004078, 28.68749924004078, 1);
+	width:428px;
+	height:125px;
+	top:1280px;
+	position: absolute;
+	font-family:Inter;
+	text-align:left;
+	font-size:36px;
+	letter-spacing:0;
+}
+
+.BMI-graphBox {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(255, 245.38726061582565, 194.92075502872467, 1);
+	width:967px;
+	height:528px;
+	top: 1300px;
+	position:absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.BMI-graph-section {
+	background-color:rgb(253, 246, 212);
+	width:895px;
+	height:528px;
+	position:absolute;
+	border-left: 1px solid rgb(192, 192, 192);
+	top: 0px;
+	left: 70px;
+}
+
+.BMI-text {
+	font-weight: 500;
+	top: 200px;
+	padding-left: 15px;
+}
+/* ====== BMI 부분 끝 ====== */
+
+
+/* ====== 스트레스 관리 부분 ====== */
+
+.stress-box {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(248.09374898672104, 248.09374898672104, 248.09374898672104, 1);
+	width:967px;
+	height:319px;
+	top:2050px;
+	position:absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+.stress-title-box {
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(223.125, 249.2625054717064, 255, 1);
+	width:967px;
+	height:73px;
+	position:absolute;
+}
+
+.stress-title {
+	color:rgba(28.68749924004078, 28.68749924004078, 28.68749924004078, 1);
+	width:428px;
+	height:125px;
+	position:absolute;
+	top:2030px;
+	font-family:Inter;
+	text-align:left;
+	font-size:36px;
+	letter-spacing:0;
+}
+
+.stress-action {
+	color:rgba(28.68749924004078, 28.68749924004078, 28.68749924004078, 1);
+	width:97px;
+	height:56px;
+	position:absolute;
+	left:1172px;
+	top:1877px;
+	font-family:Inter;
+	text-align:center;
+	font-size:28px;
+	letter-spacing:0;
+}
+
+.middle-line {
+	transform: rotate(90deg);
+	width:330px;
+	height:0px;
+	position:absolute;
+	left:320px;
+	top:158px;
+	border:5px solid rgba(255, 255, 255, 1);
+}
+
+.stress-food,
+.stress-action {
+    position:absolute;
+    font-weight: 700;
+	top: 20px;
+	padding-left: 15px;
+}
+
+.stress-action {left: 190px;}
+.stress-food {left: 690px;}
+
+/* ====== 스트레스 관리 끝 ====== */
+
+
+
+/* ====== 회원가입 페이지 ====== */
+.regist, .regist2, .diary {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+.regist-box {
+	border:1px solid #858585;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#F9FBFC;
+	width: 700px;
+	height:320px;
+	position:absolute;
+	left:600px;
+	top:380px;
+	border-radius:90px;
+}
+.regist-title {
+	color:#1D1D1D;
+	width:380px;;
+	height:80px;
+	position:absolute;
+	left:740px;
+	top:260px;
+	font-family:Inter;
+	text-align:center;
+	font-size:60px;
+	font-weight: bold;
+	letter-spacing:0;
+}
+.regist-info-box {
+	color:#858585;
+	font-family:Inter;
+	text-align:left;
+	font-size:26px;
+	letter-spacing:0;
+
+	border:1px solid #858585;
+	background-color:#FFFFFF;
+	height:45px;
+	position:absolute;
+	left:130px;
+	border-radius:10px;
+	text-indent: 10px;
+}
+/* #nickname {
+	width:410px;
+	top:210px;
+} */
+#birthday {
+	width:410px;
+    top:140px;
+}
+.gender {
+	left: 160px;
+	top:70px;
+    color: rgba(133, 133, 133, 1);
+    position: absolute;
+    font-family: Inter;
+    text-align: left;
+    font-size: 26px;
+    letter-spacing: 0;
+}
+.gender label {
+	padding-left: 80px;
+	margin-right: 15px; /* 라벨 간 간격을 조절할 수 있습니다. */
+  }
+
+/*
+#id {
+	width:410px;
+	top:210px;
+}
+#password {
+	width:410px;
+	top:280px;
+}
+#checkPassword {
+	width:410px;
+	top:350px;
+}
+*/
+/* Regist2 */
+.regist2-notice {
+	color:#858585;
+	width:550px;
+	height:40px;
+	position:absolute;
+	left:520px;
+	top:170px;
+	font-family:Inter;
+	text-align:left;
+	font-size:26px;
+	letter-spacing:0;
+}
+#hib-box {
+	top: 230px;
+}
+
+/* RegistSuccess */
+.registSuccess {
+	background-color:#FFFFFF;
+	width:650px;
+	height:699px;
+	position:absolute;
+	left:634px;
+	top:170px;
+	border-radius:70px;
+}
+.Popup-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* 검정색 배경에 투명도 추가 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999; /* 다른 요소 위에 나타나도록 설정 */
+}
+.registSuccess-notice {
+	color:rgba(0, 0, 0, 1);
+	width:400px;
+	height:162px;
+	position:absolute;
+	left:120px;
+	top:93px;
+	font-family:Jaldi;
+	text-align:center;
+	font-size:48px;
+	letter-spacing:0;
+}
+.check-border {
+	border:1px solid #71D7FF;
+	border-radius:500px;
+	background-color:#71D7FF;
+	width:135px;
+	height:135px;
+	position:absolute;
+	left:257px;
+	top:297px;
+}
+/* ====== 회원가입 페이지 끝 ====== */
+
+/* ====== 캘린더 페이지  ====== */
+
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.calendar {
+    width: 90%;
+	height:100%;
+    margin: auto;
+}
+
+.calendar_header {
+    display: inline-block;
+	padding-top: 110px;
+	padding-left: 530px;
+}
+
+.calendar_nav {
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.go-today {
+    width: 80%;
+}
+
+.calendar_main {
+    border-collapse: collapse;
+    width: 80%;
+	padding-left: 250px;
+}
+
+.days {
+    display: flex;
+    margin: 25px 0 10px;
+}
+
+.day {
+    width: calc(100% / 7);
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.dates {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid #33333341;
+}
+
+.date {
+    cursor: pointer;
+    width: calc(100% / 7);
+    padding: 5% 1%;
+    text-align: center;
+    border: 1px solid #33333341;
+    transition: all 0.3s;
+}
+
+.date-itm {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.date_event {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.event-itm {
+    display: block;
+    font-size: 15px;
+}
+
+.date:nth-child(7n + 1),
+.day:nth-child(7n + 1) {
+    color: #D13E3E;
+}
+
+.date:nth-child(7n),
+.day:nth-child(7n) {
+    color: #396EE2;
+}
+
+.other {
+    color: rgba(88, 88, 88, 0.315) !important;
+}
+
+.today {
+    position: relative;
+    background-color: rgba(28, 213, 255, 0.627);
+    /* 28, 191, 255, 1 */
+    color: #ffffff !important;
+}
+
+.selected {
+    background-color: #99e3ec;
+    color: #ffffff !important;
+}
+
+.resv-wrapper {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #3333335b;
+    display: none;
+    justify-content: center;
+}
+
+.resv-wrapper.open {
+    display: flex;
+}
+
+.resv-bg {
+    width: 90%;
+    position: relative;
+    padding: 5%;
+    background-color: #ffffff;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px;
+    font-size: 20px;
+}
+
+.resv-close {
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #ffffff;
+    text-align: right;
+    float: right;
+}
+
+.resv-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+}
+
+.resv-list > p {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 0 solid black;
+}
+
+.resv-event {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+}
+
+.resv-event > p {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    border: 0 solid black;
+}
+
+.resv_set {
+    cursor: pointer;
+    width: 80%;
+    margin: 10px auto auto;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 280px) {
+
+    .calendar {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .calendar_nav {
+        font-size: 20px;
+    }
+
+    .date_event {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: rgba(51, 51, 51, 0.2);
+        margin: auto;
+        border-radius: 100%;
+    }
+
+    .event-itm {
+        font-size: 0;
+    }
+}
+
+@media screen and (min-width: 280px) {
+
+    .calendar {
+        width: 90%;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .calendar_nav {
+        font-size: 20px;
+    }
+
+    .date_event {
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: rgba(51, 51, 51, 0.2);
+        margin: auto;
+        border-radius: 100%;
+    }
+
+    .event-itm {
+        font-size: 0;
+    }
+}
+
+.toggle-switch input {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.toggle-switch input[type=checkbox] {
+    display: none;
+}
+
+.toggle-track {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 25px;
+    border-radius: 60px;
+    background: #8b8b8b;
+}
+.toggle-track:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -6px;
+    left: -15px;
+    width: 27px;
+    height: 27px;
+    margin: 5px;
+    background: #fff;
+    border-radius: 100%;
+    border: 1px solid #8b8b8b;
+    transition: left 0.3s;
+}
+.toggle-switch input[type=checkbox] + label .toggle-track:after {
+    content: 'OFF';
+    display: inline-block;
+    position: absolute;
+    right: 8px;
+    color: #fff;
+}
+
+.toggle-switch input[type=checkbox]:checked + label .toggle-track {
+    background: #FA9AA6;
+}
+.toggle-switch input[type=checkbox]:checked + label .toggle-track:before {
+    left: 40px;
+    border: 1px solid #FA9AA6;
+}
+.toggle-switch input[type=checkbox]:checked + label .toggle-track:after {
+    content: 'ON';
+    left: 5px;
+}
+
+@media screen and (min-width: 600px) {
+
+    .calendar {
+        width: 70%;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .date_event {
+        display: inline-block;
+        width: auto;
+        height: auto;
+        background: #ff8f8f00;
+        margin: auto;
+        padding-bottom: 0;
+        border-radius: 0;
+    }
+
+    .event-itm {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ====== 캘린더 페이지 끝 ====== */
+
+/*  ====== 마이 페이지 ====== */
+.myPage{
+	overflow:hidden;
+	width: 100%;
+	height: 1830px;
+	position:absolute;
+}
+.myPage-top {
+	background-color:#FFFFFF;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	width:100%;
+	height:680px;
+	position:absolute;
+	left:0px;
+	top:0px;
+}
+.mp-c {
+	color:#1D1D1D;
+	width:300px;
+	height:100px;
+	position:absolute;
+	left:350px;
+	top:190px;
+	font-weight: bold;
+	font-family:Inter;
+	text-align:center;
+	font-size:55px;
+	letter-spacing:0;
+}
+.info-line {
+	background-color: #858585;
+	backface-visibility: visible;
+    position: absolute;
+    width: 445px;
+	height: 2px;
+	left: 680px;
+    border-radius: 10px;
+}
+
+#line1 {
+    top: 390px;
+}
+
+#line2 {
+    top: 450px;
+}
+
+#line3 {
+    top: 513px;
+}
+.pentagon-graph{
+	border:1px solid #858585;
+	position:absolute;
+	width: 300px;
+	height: 300px;
+	left: 1240px;
+	top: 300px;
+	text-align: center;
+	z-index: 1;
+}
+.mp-name {
+	color:#858585;
+	width:500px;
+	height:35px;
+	position:absolute;
+	left:680px;
+	top:350px;
+	font-family:Inter;
+	text-align:left;
+	font-size:26px;
+	letter-spacing:0;
+}
+.mp-gender {
+	color:#858585;
+	width:500px;
+	height:35px;
+	position:absolute;
+	left:680px;
+	top:410px;
+	font-family:Inter;
+	text-align:left;
+	font-size:26px;
+	letter-spacing:0;
+}
+.mp-birthday {
+	color:#858585;
+	width:500px;
+	height:35px;
+	position:absolute;
+	left:680px;
+	top:470px;
+	font-family:Inter;
+	text-align:left;
+	font-size:26px;
+	letter-spacing:0;
+}
+.profile-change {
+	width:200px;
+	height:250;
+	left:413px;
+	top:330px;
+	position:absolute;
+}
+.profile-image {
+	width:180px;
+	height:200px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+/* MyPage Bottom */
+.myPage-bottom {
+	overflow:hidden;
+	width:100%;
+	top: 700px;
+	height:1150px;
+	position:relative;
+}
+.hib {
+	border:1px solid #858585;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#F9FBFC;
+	width:900px;
+	height:659px;
+	position:absolute;
+	left:500px;
+	top:150px;
+	border-radius:10px;
+}
+.hib-text {
+	color:#1D1D1D;
+	width:245px;
+	height:100px;
+	position:absolute;
+	left:815px;
+	top:50px;
+	font-weight: bold;
+	font-family:Inter;
+	text-align:center;
+	font-size:40px;
+	letter-spacing:0;
+}
+.choose-box {
+	border:1px solid #858585;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#FFFFFF;
+	width:286px;
+	height:30px;
+	position:absolute;
+	left:13px;
+	top:40px;
+	border-radius:10px;
+	color:#858585;
+	font-size:18px;
+	text-indent: 5px;
+}
+.info-question {
+	color:#505050;
+	width:400px;
+	height:30px;
+	position:absolute;
+	left:0px;
+	top:0px;
+	font-family:Jaldi;
+	text-align:left;
+	font-size:20px;
+	letter-spacing:0;
+}
+.hib-info1 {
+	width:200px;
+	height:84px;
+	position:absolute;
+	left:75px;
+	top:20px;
+}
+.hweight-text {
+	border:1px solid #858585;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#FFFFFF;
+	width:125px;
+	height:30px;
+	position:absolute;
+	left:13px;
+	top:35px;
+	border-radius:10px;
+	color:#858585;
+	font-size:20px;
+	text-indent: 5px;
+}
+.hib-hweight {
+	color:#505050;
+	width:54px;
+	height:48px;
+	position:absolute;
+	left:152px;
+	top:36px;
+	font-family:Jaldi;
+	text-align:left;
+	font-size:22px;
+	letter-spacing:0;
+}
+.hib-info2 {
+	width:250px;
+	height:84px;
+	position:absolute;
+	left:490px;
+	top:20px;
+}
+.hib-info3 {
+	width:386px;
+	height:79px;
+	position:absolute;
+	left:75px;
+	top:125px;
+}
+.hib-info4 {
+	width:380px;
+	height:79px;
+	position:absolute;
+	left:490px;
+	top:125px;
+}
+.hib-info5 {
+	width:380px;
+	height:79px;
+	position:absolute;
+	left:75px;
+	top:230px;
+}
+.hib-info6 {
+	width:380px;
+	height:79px;
+	position:absolute;
+	left:490px;
+	top:230px;
+}
+.hib-info7 {
+	width:380px;
+	height:79px;
+	position:absolute;
+	left:75px;
+	top:335px;
+}
+.hib-info8 {
+	width:380px;
+	height:79px;
+	position:absolute;
+	left:490px;
+	top:335px;
+}
+.hib-info9 {
+	width:750px;
+	height:100px;
+	position:absolute;
+	left:85px;
+	top:440px;
+}
+.info9-text {
+	border:1px solid #858585;
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#FFFFFF;
+	width:700px;
+	height:73px;
+    position:absolute;
+	left:0px;
+	top:35px;
+	border-radius:10px;
+	color:#858585;
+	font-size:20px;
+	text-indent: 5px;
+}
+
+/*  ====== 다이어리 페이지 ====== */
+.diary-top-tool {
+    width: 930px;
+    height: 45px;
+    position: absolute;
+    left: 470px;
+    top: 48px;
+}
+.diary-top-bar {
+    border: 2px solid #353535;
+    background-color: rgba(112.62499898672104, 215.40455907583237, 255, 1);
+    width: 930px;
+    height: 48px;
+}
+.diary-top-logo {
+    color: rgba(255, 255, 255, 1);
+    width: 150px;
+    height: 35px;
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    font-family: Jaldi;
+    text-align: center;
+    font-size: 28px;
+    letter-spacing: 0;
+}
+.diary-close-tool {
+    border: 2px solid #353535;
+    background-color: rgba(229.00000154972076, 246.0000005364418, 255, 1);
+    width: 51px;
+    height: 49px;
+    position: absolute;
+    left: 879px;
+    top: 0;
+    z-index: inherit;
+}
+.diary-tool {
+    border: 2px solid #353535;
+    background-color: rgba(255, 255, 255, 1);
+    width: 930px;
+    height: 800px;
+    position: absolute;
+    left: 470px;
+    top: 94px;
+}
+.Diary-title {
+    color: rgba(0, 0, 0, 1);
+    width: 224px;
+    height: 57px;
+    position: absolute;
+    left: 90px;
+    top: 30px;
+    font-family: Inter;
+    font-weight: bold;
+    text-align: left;
+    font-size: 35px;
+    letter-spacing: 0;
+}
+#diary-feedback {
+    top: 480px;
+    font-size: 28px;
+}
+.question-tool {
+    width: 750px;
+    height: 70px;
+    position: absolute;
+    left: 90px;
+}
+#exercise {
+    top: 90px;
+}
+#food {
+    top: 180px;
+}
+#weight {
+    top: 360px;
+}
+#feel {
+    top: 270px;
+}
+.diary-question {
+    color: rgba(53.1249987334013, 53.1249987334013, 53.1249987334013, 1);
+    width: 850px;
+    height: 29px;
+    position: absolute;
+    left: 15px;
+    top: 0;
+    font-family: Inter;
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0;
+}
+.weightAlert {
+        color: rgba(53.1249987334013, 53.1249987334013, 53.1249987334013, 1);
+        width: 850px;
+        height: 29px;
+        position: absolute;
+        left: 235px;
+        top: 5px;
+        font-family: Inter;
+        text-align: left;
+        font-size: 14px;
+        letter-spacing: 0;
+}
+.question-box {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(248.09374898672104, 248.09374898672104, 248.09374898672104, 1);
+    width: 728px;
+    height: 40px;
+    position: absolute;
+    left: 10px;
+    top: 30px;
+    font-size: 18px;
+    color: rgba(53.1249987334013, 53.124s9987334013, 53.1249987334013, 1);
+    text-indent: 10px;
+    border: 1px solid transparent;
+}
+.question-answer {
+    color: rgba(53.1249987334013, 53.1249987334013, 53.1249987334013, 1);
+    width: 850px;
+    height: 29px;
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    font-family: Inter;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0;
+}
+.feedback-box {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(248.09374898672104, 248.09374898672104, 248.09374898672104, 1);
+    width: 728px;
+    height: 230px;
+    position: absolute;
+    left: 100px;
+    top: 530px;
+    border: 1px solid transparent;
+}
+.feedback-t {
+    color: rgba(53.1249987334013, 53.1249987334013, 53.1249987334013, 1);
+    width: 720px;
+    height: 220px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-family: Inter;
+    text-align: left;
+    font-size: 18px;
+    letter-spacing: 0;
+    text-indent: 2px;
+}
+
+/* Diary Popup */
+.DoubleCheck {
+	background-color:rgba(255, 255, 255, 1);
+	width:650px;
+	height:699px;
+	position:absolute;
+	left:634px;
+	top:140px;
+	border-radius:70px;
+}
+.DoubleCheck-notice-b {
+	color:rgba(0, 0, 0, 1);
+	width:580px;
+	height:81px;
+	position:absolute;
+	left:30px;
+	top:180px;
+	font-family:Jaldi;
+	font-weight: bold;
+	text-align:center;
+	font-size:48px;
+	letter-spacing:0;
+}
+.DoubleCheck-notice-s {
+	color:rgba(0, 0, 0, 1);
+	width:520px;
+	height:29px;
+	position:absolute;
+	left:60px;
+	top:310px;
+	font-family:Jaldi;
+	text-align:center;
+	font-size:30px;
+	letter-spacing:0;
+}
+
+/*  ====== 다이어리 페이지 끝 ====== */
+
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+
+@media (max-width: 767.98px) {
+    .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+        transition-delay: 0 !important;
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Desktop Navigation
+--------------------------------------------------------------*/
+@media (min-width: 1280px) {
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar ul {
+        margin: 0;
+        padding: 0;
+        /* display: flex; */
+        list-style: none;
+        align-items: center;
+    }
+
+    .navbar li {
+        position: relative;
+    }
+
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar a:hover,
+    .navbar li:hover > a {
+        color: #fff;
+    }
+}
+
+@media (min-width: 1280px) {
+
+    /* .mobile-nav-hide,
+    .mobile-nav-show {
+        display: none;
+    } */
+}
+
+/*--------------------------------------------------------------
+# Mobile Navigation
+--------------------------------------------------------------*/
+@media (max-width: 1279px) {
+
+    .navbar .active,
+    .navbar .active:focus,
+    .navbar a:hover,
+    .navbar li:hover > a {
+        color: #fff;
+    }
+
+    .navbar li {
+        list-style-type: none;
+    }
+
+    .mobile-nav-show {
+        color: #fff;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        z-index: 9999;
+        margin-right: 10px;
+    }
+
+    .mobile-nav-hide {
+        color: #fff;
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 0;
+        transition: 0.5s;
+        position: fixed;
+        right: 20px;
+        top: 70px;
+        z-index: 50;
+    }
+
+    .mobile-nav-active {
+        overflow: hidden;
+    }
+
+    .mobile-nav-active .navbar {
+        right: 0;
+    }
+
+    .mobile-nav-active .navbar:before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: rgba(14, 29, 52, 0.8);
+        z-index: 9996;
+    }
+}
+
+
+.graph-img {
+	width:49px;
+	height:49px;
+	position:absolute;
+	left:1712px;
+	top:580px;
+	/* background-image:url(images/pngwing_1.png); */
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+/* Button */
+.login-btn,
+.login-text,
+.sign-up-btn,
+.sign-up-text {
+    position: absolute;
+}
+.login-btn {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(112.62499898672104, 215.40455907583237, 255, 1);
+    width: 221px;
+    height: 63px;
+
+    position: absolute;
+    left: 120px;
+    top: 280px;
+    border-radius: 90px;
+    border: 1px solid rgba(112.62499898672104, 215.40455907583237, 255, 1);
+}
+.sign-up-btn {
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgba(112.62499898672104, 215.40455907583237, 255, 1);
+    width: 221px;
+    height: 63px;
+
+    position: absolute;
+    left: 360px;
+    top: 280px;
+    border-radius: 90px;
+    border: 3px solid rgba(112.62499898672104, 215.40455907583237, 255, 1);
+}
+.nav-btn {
+    width: 28px;
+    height: 30px;
+    border: none;
+    font-size: 50px;
+    line-height: 34px;
+    margin: 0 20px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.resv_btn {
+    cursor: pointer;
+    font-size: 18px;
+    width: 40%;
+    height: 30px;
+    margin-top: 20px;
+    padding: 5px 0;
+}
+.profile-box button {
+	box-shadow:0px 3px 3px rgba(68, 68, 68, 0.25);
+	background-color:rgba(255, 255, 255, 1);
+	width:220px;
+	height:35px;
+	position:absolute;
+
+    cursor: pointer;
+    font-size: 16px;
+}
+.nav-btn {
+	font-size: 20px;
+}
+.profile-box .myPage-btn {
+    border: 2px solid rgba(218, 218, 218, 0.5);
+	left:35px;
+	top:230px;
+}
+.profile-box .calendar-btn{
+    border: 2px solid rgba(218, 218, 218, 0.5);
+	left:35px;
+	top:280px;
+}
+.logout-btn,
+.prf-name {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.logout-btn {
+    color:rgba(133, 133, 133, 1);
+	width:99px;
+	height:38px;
+	position:absolute;
+	left:98px;
+	top:400px;
+	font-family:Inter;
+	text-align:center;
+	font-size:18px;
+	letter-spacing:0;
+}
+.change-pc-btn:hover {
+	background-color: rgb(69, 202, 255);
+}
+.next-btn {
+	background-color:#71D7FF;
+	width:172px;
+	height:63px;
+	position:absolute;
+	left:270px;
+	top:225px;
+	border-radius:90px;
+	border: 1px solid transparent;
+}
+.next-btn:hover, .update-btn:hover, .edit-btn:hover {
+	background-color:rgb(78, 205, 255);
+}
+#next-t {	
+	color:#FFFFFF;
+	font-family:Inter;
+	text-align:center;
+	font-size:28px;
+	letter-spacing:0;
+}
+.move-login-btn { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:#E5F6FF;
+	width:395px;
+	height:125px;
+	position:absolute;
+	left:127px;
+	top:495px;
+	border-radius:30px;
+	border: 1px solid transparent;
+}
+#emove-login-t { 
+	color:rgba(0, 0, 0, 1);
+	width:341px;
+	height:57px;
+	position:absolute;
+	left:28px;
+	top:45px;
+	font-family:Jaldi;
+	text-align:center;
+	font-size:30px;
+	letter-spacing:0;
+}
+.move-login-btn:hover{
+	background-color: rgb(200, 229, 240);
+}
+.change-pc-btn { 
+	border:1px solid #1CC0FF;
+	background-color:#1CC0FF;
+	width:92px;
+	height:28.907936096191406px;
+	position:absolute;
+	left:47px;
+	top:220px;
+	border-radius:90px;
+}
+#change-pc-t { 
+	color:#FFFFFF;
+	font-family:Inter;
+	text-align:center;
+	font-size:15px;
+	letter-spacing:0;
+}
+.edit-btn, .update-btn { 
+	border:1px solid #71D7FF;
+	background-color:#71D7FF;
+	width:160px;
+	height:50px;
+	position:absolute;
+	left:350px;
+	top:585px;
+	border-radius:90px;
+}
+#edit-t, #update-t { 
+	color:#FFFFFF;
+	width:133px;
+	height:35px;
+	position:absolute;
+	left:12px;
+	top:5px;
+	font-family:Inter;
+	text-align:center;
+	font-size:26px;
+	letter-spacing:0;
+}
+.DoubleCheck-btn { 
+	box-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+	background-color:rgba(112.62499898672104, 215.40455907583237, 255, 1);
+	width:195px;
+	height:125px;
+	position:absolute;
+	top:456px;
+	border-radius:30px;
+	text-align:center;
+	color:rgba(0, 0, 0, 1);
+	font-size:30px;
+	font-family: Jaldi;
+	line-height: 125px; 
+	border: 2px solid rgba(0, 0, 0, 0);
+}
+.DoubleCheck-btn:hover {
+	background-color: #85dcff;
+}
+#okay-btn {
+	left:341px;
+}
+#no-btn {
+	left: 100px;
+}
+.save-btn { 
+	border: 1px solid transparent;
+	background-color:rgb(141 221 252);
+	width:89px;
+	height:42px;
+	position:absolute;
+	left:580px;
+	top:450px;
+	border-radius:90px;
+	color:rgba(255, 255, 255, 1);
+	font-family:Inter;
+	font-size:19px;
+	letter-spacing:0;
+}
+.save-btn:hover {
+	background-color: rgb(161 229 255);
+}
+.feedback-btn { 
+	border: 1px solid transparent;
+	background-color:rgba(28.000000230968, 192.00000375509262, 255, 1);
+	width:150px;
+	height:42px;
+	position:absolute;
+	left:680px;
+	top:450px;
+	border-radius:90px;
+	color:rgba(255, 255, 255, 1);
+	font-family:Inter;
+	font-size:19px;
+	letter-spacing:0;
+}
+.feedback-btn:hover {
+	background-color: rgb(75 200 248);
+}

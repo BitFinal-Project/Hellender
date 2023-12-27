@@ -1,0 +1,29 @@
+[
+    {
+        "uid": 1,
+        "bmi_value": 30.864197530864196,
+        "birthday": "2000-02-02 00:00:00",
+        "cre_date": "2023-12-26",
+        "etc_hist": "\uc88b\uc74c",
+        "exercise": "\ub700\uac78\uc74c 3\uc2dc\uac04",
+        "feel": "\uc804\uccb4\uc801\uc73c\ub85c \uae30\ubd84\uc774 \ub098\uc058\uc9c0 \uc54a\uc74c",
+        "food": "\uc544\uce68 \uc810\uc2ec \uc800\ub141\uc73c\ub85c \uc9dc\uc7a5\uba74\uc744 \uba39\uc74c",
+        "height": 1.8,
+        "weight": 100.0,
+        "b_five": 24.691358024691358,
+        "b_four": 24.691358024691358,
+        "b_one": 30.864197530864196,
+        "b_six": 24.691358024691358,
+        "b_three": 24.691358024691358,
+        "b_two": 24.691358024691358,
+        "flavor": "\uc720\uc5f0\uc131 \ud5a5\uc0c1",
+        "gender": "0",
+        "health_level": "\uac00\ubcbc\uc6c0",
+        "health_num": "2\ud68c",
+        "health_time": "1\uc2dc\uac04 30\ubd84 \uc774\uc0c1 2\uc2dc\uac04 \ubbf8\ub9cc",
+        "location_num": "\uc2e4\ub0b4",
+        "nickname_m": "\ucd5c\uc724\uc218",
+        "profile_image": "http://k.kakaocdn.net/dn/Jqa9S/btsBDMjzgYe/jRqHUpbkjfj70fm9mawck0/img_640x640.jpg",
+        "purpose": "\uc2a4\ud2b8\ub808\uc2a4 \ud574\uc18c"
+    }
+]
