@@ -35,8 +35,6 @@ public class MemberServiceImpl implements MemberService{
     public Member updateMember(Member member) {
         Member existingMember = memberRepository.findById(member.getUid()).get();
 
-        //existingMember.setGender(member.getGender());
-        //existingMember.setBirthday(member.getBirthday());
         existingMember.setHealth_Level(member.getHealth_Level());
         existingMember.setFlavor(member.getFlavor());
         existingMember.setPurpose(member.getPurpose());
@@ -59,22 +57,10 @@ public class MemberServiceImpl implements MemberService{
     public Member calupdateMember(Member member) {
         Member existingMember = memberRepository.findById(member.getUid()).get();
 
-        //existingMember.setHeight(member.getHeight());
         existingMember.setExercise(member.getExercise());
         existingMember.setFood(member.getFood());
         existingMember.setFeel(member.getFeel());
-        //existingMember.setWeight(member.getWeight());
-        //existingMember.setBMI_Value(member.getBMI_Value());
         Member calupdateMember = memberRepository.save(existingMember);
-        //bmi_value 업데이트 코드 추가
-        //bmi_value 업데이트 코드 추가
-        //memberRepository.update_BmiSix(member.getUid());
-        //memberRepository.update_BmiFive(member.getUid());
-        //memberRepository.update_BmiFour(member.getUid());
-        //memberRepository.update_BmiThree(member.getUid());
-        //memberRepository.update_BmiTwo(member.getUid());
-        //memberRepository.update_BmiOne(member.getUid());
-        //memberRepository.updateBmiValueByUid(member.getUid());
 
         return calupdateMember;
     }
@@ -83,12 +69,7 @@ public class MemberServiceImpl implements MemberService{
     public Member weightupdateMember(Member member) {
         Member existingMember = memberRepository.findById(member.getUid()).get();
 
-        //existingMember.setHeight(member.getHeight());
-        //existingMember.setExercise(member.getExercise());
-        //existingMember.setFood(member.getFood());
-        //existingMember.setFeel(member.getFeel());
         existingMember.setWeight(member.getWeight());
-        //existingMember.setBMI_Value(member.getBMI_Value());
         Member calupdateMember = memberRepository.save(existingMember);
         //bmi_value 업데이트 코드 추가
         memberRepository.update_BmiSix(member.getUid());
