@@ -12,8 +12,7 @@ public interface MemberRepository extends JpaRepository<Member, Integer> {
 
     @Modifying
     @Transactional
-    /* BMI_Value값을 변경하는 쿼리*/
-    //@Query("UPDATE Member m SET m.BMI_Value = (SELECT m.Weight / (m.Height * m.Height) FROM Member m WHERE m.Uid = :uid)")
+    /* BMI_Value값을 변경하는 쿼리 */
     @Query("UPDATE Member SET BMI_Value = (Weight / (Height * Height)) WHERE Uid = :uid")
     void updateBmiValueByUid(Integer uid);
 
