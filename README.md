@@ -1,3 +1,6 @@
+AWS React Adress => http://43.203.42.81:3000
+AWS Spring Boot Adress => http://43.203.42.81:8080
+
 Spring Boot
 
 - spring boot로 Back-End(Login / DB) 구현
