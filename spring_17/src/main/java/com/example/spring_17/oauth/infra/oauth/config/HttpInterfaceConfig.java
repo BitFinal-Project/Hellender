@@ -1,8 +1,6 @@
 package com.example.spring_17.oauth.infra.oauth.config;
 
-import com.example.spring_17.oauth.infra.oauth.google.client.GoogleApiClient;
 import com.example.spring_17.oauth.infra.oauth.kakao.client.KakaoApiClient;
-import com.example.spring_17.oauth.infra.oauth.naver.client.NaverApiClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -15,16 +13,6 @@ public class HttpInterfaceConfig {
     @Bean
     public KakaoApiClient kakaoApiClient() {
         return createHttpInterface(KakaoApiClient.class);
-    }
-
-    @Bean
-    public NaverApiClient naverApiClient() {
-        return createHttpInterface(NaverApiClient.class);
-    }
-
-    @Bean
-    public GoogleApiClient googleApiClient() {
-        return createHttpInterface(GoogleApiClient.class);
     }
 
     private <T> T createHttpInterface(Class<T> clazz) {
