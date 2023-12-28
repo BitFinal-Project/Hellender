@@ -1,6 +1,6 @@
-Spring Boot 
--spring boot로 Back-End(Login / DB) 구현
--KakaoLogin Rest Api 로그인 연동
+Spring Boot
+- spring boot로 Back-End(Login / DB) 구현
+- KakaoLogin Rest Api 로그인 연동
 
 AWS Lightsail 
 - Amazon Linux 2로 인스턴스 생성 
