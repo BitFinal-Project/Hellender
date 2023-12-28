@@ -4,7 +4,7 @@ AWS Spring Boot Adress => http://43.203.42.81:8080
 
 Spring Boot
 
-- spring boot로 Back-End(Login / DB) 구현
+- Spring boot로 Back-End(Login / DB) 구현
   
 - KakaoLogin Rest Api 로그인 연동
 
@@ -17,11 +17,11 @@ AWS Lightsail
 - IDE: IntelliJ IDEA Community
 - Gradle - Java 17
 - Spring Boot 3.2.0
-- mysql 8.0.35
+- Mysql 8.0.35
 - Lombok
 - Spring Web
 - Spring Data JPA
-- mysql-connetor 8.0.28
+- Mysql-connetor 8.0.28
 
 개발 언어
 -  python3, Java, JavaScript(React)
