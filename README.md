@@ -2,6 +2,16 @@ AWS React Adress => http://43.203.42.81:3000
 
 AWS Spring Boot Adress => http://43.203.42.81:8080
 
+AWS Django Adress => http://43.203.42.81:8000
+
+React
+
+- 웹 서비스 UI 구현
+
+- Axios로 Back-End 연결
+
+- 반응형 웹 프로그램
+
 Spring Boot
 
 - Spring boot로 Back-End(Login / DB) 구현
